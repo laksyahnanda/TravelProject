@@ -141,11 +141,11 @@
 			<div class="row about_row">
 				<div class="col-lg-6">
 					<div class="about_content">
-						<div class="text_highlight">Pellentesque sit amet elementum ccumsan sit amet mattis eget, tristique at leo. Vivamus massa.Tempor massa et laoreet .Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+						<div class="text_highlight">Being one with nature brings several benefits to a person’s healthy state of mind, body, and spirit. More often than not, a nature trip is simply what it takes to rejuvenate from the tiring and busy city life. Apart from this, a nature trip may just be the adventure that you need.</div>
 						<div class="about_text">
-							<p>Pellentesque sit amet elementum ccumsan sit amet mattis eget, tristique at leo. Vivamus massa.Tempor massa et laoreet .Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu laoreet ante, sollicitudin volutpat quam. Vestibulum posuere malesuada ultrices. In pulvinar rhoncus lacus at aliquet. Nunc vitae lacus varius, auctor nisi sit amet, consectetur mauris. Curabitur sodales semper est, vel faucibus urna laoreet vel. Ut justo diam, sodales non pulvinar at, vulputate quis neque. Etiam aliquam purus vel ultricies consequat.</p>
+							<p>Travel exposes us to different cultures and ancient traditions and through these authentic encounters, we learn to embrace and celebrate both our similarities and our differences. Travel teaches us about humanity and gives us an appreciation, understanding and respect for different points of view and ways of life.</p>
 						</div>
-						<div class="button about_button"><a href="#">read more</a></div>
+						<div class="button about_button"><a href="https://www.andbeyond.com/magazine/10-reasons-to-love-travel/#:~:text=Travel%20exposes%20us%20to%20different,view%20and%20ways%20of%20life.">read more</a></div>
 					</div>
 				</div>
 				<div class="col-lg-6">
@@ -166,7 +166,7 @@
 					<div class="milestone text-center">
 						<div class="milestone_icon"><img src="{% static 'images/mountain.svg' %}" alt=""></div>
 						<div class="milestone_counter" data-end-value="17">0</div>
-						<div class="milestone_text">Online Courses</div>
+						<div class="milestone_text">Destinations</div>
 					</div>
 				</div>
 
@@ -175,7 +175,7 @@
 					<div class="milestone text-center">
 						<div class="milestone_icon"><img src="{% static 'images/island.svg' %}" alt=""></div>
 						<div class="milestone_counter" data-end-value="213">0</div>
-						<div class="milestone_text">Students</div>
+						<div class="milestone_text">Locations</div>
 					</div>
 				</div>
 
@@ -183,8 +183,8 @@
 				<div class="col-lg-3 milestone_col">
 					<div class="milestone text-center">
 						<div class="milestone_icon"><img src="{% static 'images/camera.svg' %}" alt=""></div>
-						<div class="milestone_counter" data-end-value="11923">0</div>
-						<div class="milestone_text">Teachers</div>
+						<div class="milestone_counter" data-end-value="1923">0</div>
+						<div class="milestone_text">Nature Spots</div>
 					</div>
 				</div>
 
@@ -209,7 +209,7 @@
 			<div class="row">
 				<div class="col text-center">
 					<div class="section_subtitle">simply amazing places</div>
-					<div class="section_title"><h2>Why choose us?</h2></div>
+					<div class="section_title"><h2>Where I need to go?</h2></div>
 				</div>
 			</div>
 			<div class="row why_row">
@@ -287,56 +287,58 @@
 			<div class="row team_row">
 				
 				<!-- Team Item -->
+				{% for i in results %}
 				<div class="col-xl-3 col-md-6 team_col">
 					<div class="team_item d-flex flex-column align-items-center justify-content-start text-center">
-						<div class="team_image"><img src="{% static 'images/team_1.jpg'%}" alt=""></div>
+						<div class="team_image"><img src="{{i.img.url}}" alt="" style="height:200px; width:200px;"></div>
 						<div class="team_content">
-							<div class="team_title"><a href="#">Margaret Smith</a></div>
+							<div class="team_title"><a href="#">{{i.name}}</a></div>
 							<div class="team_text">
-								<p>Pellentesque sit amet elementum ccumsan sit amet mattis eget, tristique at leo. Vivamus massa.</p>
+								<p>{{i.desc}}</p>
 							</div>
 						</div>
 					</div>
 				</div>
+				{% endfor %}
+
+<!--				&lt;!&ndash; Team Item &ndash;&gt;-->
+<!--				<div class="col-xl-3 col-md-6 team_col">-->
+<!--					<div class="team_item d-flex flex-column align-items-center justify-content-start text-center">-->
+<!--						<div class="team_image"><img src="{% static 'images/team_2.jpg' %}" alt=""></div>-->
+<!--						<div class="team_content">-->
+<!--							<div class="team_title"><a href="#">James Williams</a></div>-->
+<!--							<div class="team_text">-->
+<!--								<p>Pellentesque sit amet elementum ccumsan sit amet mattis eget, tristique at leo. Vivamus massa.</p>-->
+<!--							</div>-->
+<!--						</div>-->
+<!--					</div>-->
+<!--				</div>-->
+
+<!--				&lt;!&ndash; Team Item &ndash;&gt;-->
+<!--				<div class="col-xl-3 col-md-6 team_col">-->
+<!--					<div class="team_item d-flex flex-column align-items-center justify-content-start text-center">-->
+<!--						<div class="team_image"><img src="{% static 'images/team_3.jpg' %}" alt=""></div>-->
+<!--						<div class="team_content">-->
+<!--							<div class="team_title"><a href="#">Michael James</a></div>-->
+<!--							<div class="team_text">-->
+<!--								<p>Pellentesque sit amet elementum ccumsan sit amet mattis eget, tristique at leo. Vivamus massa.</p>-->
+<!--							</div>-->
+<!--						</div>-->
+<!--					</div>-->
+<!--				</div>-->
 
 				<!-- Team Item -->
-				<div class="col-xl-3 col-md-6 team_col">
-					<div class="team_item d-flex flex-column align-items-center justify-content-start text-center">
-						<div class="team_image"><img src="{% static 'images/team_2.jpg' %}" alt=""></div>
-						<div class="team_content">
-							<div class="team_title"><a href="#">James Williams</a></div>
-							<div class="team_text">
-								<p>Pellentesque sit amet elementum ccumsan sit amet mattis eget, tristique at leo. Vivamus massa.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Team Item -->
-				<div class="col-xl-3 col-md-6 team_col">
-					<div class="team_item d-flex flex-column align-items-center justify-content-start text-center">
-						<div class="team_image"><img src="{% static 'images/team_3.jpg' %}" alt=""></div>
-						<div class="team_content">
-							<div class="team_title"><a href="#">Michael James</a></div>
-							<div class="team_text">
-								<p>Pellentesque sit amet elementum ccumsan sit amet mattis eget, tristique at leo. Vivamus massa.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Team Item -->
-				<div class="col-xl-3 col-md-6 team_col">
-					<div class="team_item d-flex flex-column align-items-center justify-content-start text-center">
-						<div class="team_image"><img src="{% static 'images/team_4.jpg' %}" alt=""></div>
-						<div class="team_content">
-							<div class="team_title"><a href="#">Noah Smith</a></div>
-							<div class="team_text">
-								<p>Pellentesque sit amet elementum ccumsan sit amet mattis eget, tristique at leo. Vivamus massa.</p>
-							</div>
-						</div>
-					</div>
-				</div>
+<!--				<div class="col-xl-3 col-md-6 team_col">-->
+<!--					<div class="team_item d-flex flex-column align-items-center justify-content-start text-center">-->
+<!--						<div class="team_image"><img src="{% static 'images/team_4.jpg' %}" alt=""></div>-->
+<!--						<div class="team_content">-->
+<!--							<div class="team_title"><a href="#">Noah Smith</a></div>-->
+<!--							<div class="team_text">-->
+<!--								<p>Pellentesque sit amet elementum ccumsan sit amet mattis eget, tristique at leo. Vivamus massa.</p>-->
+<!--							</div>-->
+<!--						</div>-->
+<!--					</div>-->
+<!--				</div>-->
 
 			</div>
 		</div>
